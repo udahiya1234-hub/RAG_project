@@ -1,6 +1,9 @@
 """
 Advanced RAG System with NotebookLM-style features and Google TTS.
 """
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 import os
 import re
