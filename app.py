@@ -34,6 +34,10 @@ st.markdown("""
         background-color: #f0f2f6;
         margin: 10px 0;
         border-left: 4px solid #0066cc;
+        color: #000000 !important;
+    }
+    .doc-card p, .doc-card div, .doc-card span {
+        color: #000000 !important;
     }
     .insight-box {
         padding: 10px;
@@ -41,6 +45,10 @@ st.markdown("""
         background-color: #e3f2fd;
         margin: 5px 0;
         border-left: 3px solid #2196F3;
+        color: #000000 !important;
+    }
+    .insight-box p, .insight-box div, .insight-box span {
+        color: #000000 !important;
     }
     
     /* ==================== LIGHT MODE TEXT FIX ====================*/
@@ -155,6 +163,43 @@ st.markdown("""
     div[class*="info"] {
         background-color: #0f1f3d !important;
         border-color: #3498db !important;
+    }
+    
+    /* Force visibility for insight boxes and document cards */
+    .insight-box {
+        background-color: #e3f2fd !important;
+        color: #000000 !important;
+    }
+    .doc-card {
+        background-color: #f0f2f6 !important;
+        color: #000000 !important;
+    }
+    
+    /* Light mode specific fixes for all containers */
+    [data-theme="light"] .insight-box,
+    [data-theme="light"] .doc-card {
+        color: #000000 !important;
+        background-color: #f0f2f6 !important;
+    }
+    
+    [data-theme="light"] .insight-box p,
+    [data-theme="light"] .insight-box div,
+    [data-theme="light"] .doc-card p,
+    [data-theme="light"] .doc-card div {
+        color: #000000 !important;
+    }
+    
+    /* Force text visibility in all metric/stat boxes */
+    [data-theme="light"] [data-testid="metric-container"],
+    [data-theme="light"] [class*="metric"],
+    [data-theme="light"] [class*="stat"] {
+        color: #000000 !important;
+    }
+    
+    /* Expander visibility */
+    [data-theme="light"] [data-testid="stExpander"],
+    [data-theme="light"] details summary {
+        color: #000000 !important;
     }
     </style>
 """, unsafe_allow_html=True)
